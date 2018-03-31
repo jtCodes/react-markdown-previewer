@@ -1,8 +1,12 @@
 .App {
-  text-align: center;
+  overflow-x: hidden;
+  padding-bottom: 180px;
+  background-color: #fbfbfb;
+  height: 100%;
 }
 
 .App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -22,11 +26,53 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
-textarea {
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.Markdown {
+  margin-top: 25px;
+}
+p {
+  overflow-wrap: break-word;
+}
+textarea.form-control {
+  height: 80vh;
+  width: 100%;
   resize: none;
+  overflow: auto;
+  outline: none;
+
+  margin-left: -5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.preview {
+  background-color: #fff;
+  padding: 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: -5px;
+  height: 80vh;
+  width: 100%;
+  overflow: auto;
 }
